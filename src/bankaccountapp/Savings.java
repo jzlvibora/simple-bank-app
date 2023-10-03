@@ -24,4 +24,11 @@ public class Savings extends Account{
         return 0;
     }
 
+    @Override
+    public void showInfo() {
+        System.out.println("*****************************************************************************");
+        super.showInfo();
+        System.out.println("ACCOUNT: SAVINGS \n " + "SafetyBox: " + safetyDepositBox + "\n SafetyCode: " + safetyCode );
+        System.out.println("*****************************************************************************");
+    }
 }

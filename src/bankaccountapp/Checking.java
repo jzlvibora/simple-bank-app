@@ -7,7 +7,11 @@ public class Checking extends Account{
     public Checking(String name, String SSN, double balance) {
         super(name, SSN, balance);
         accountNumber = "2" + accountNumber;
-        System.out.println("CHECKING ACCOUNT :" + name + " ACCOUNTNO: " + accountNumber);
+
+        System.out.println("*****************************************************************************");
+        super.showInfo();
+        System.out.println("ACCOUNT: CHECKING \n " + "DebitCardNo.: " + debitCard + "\n PIN: " + PIN );
+        System.out.println("*****************************************************************************");
     }
 
     @Override
@@ -25,4 +29,8 @@ public class Checking extends Account{
         return 0;
     }
 
+    @Override
+    public void showInfo() {
+        super.showInfo();
+    }
 }
