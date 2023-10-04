@@ -35,6 +35,12 @@ public class Checking extends Account{
         System.out.println("*****************************************************************************");
     }
 
+    @Override
+    protected void setRate() {
+        rate = getBaseRate() * .15;
+
+    }
+
     private void setDebitCard(){
         debitCard = String.valueOf((int) (Math.random()*Math.pow(10,3)));
         PIN = (int) (Math.random()*Math.pow(10,4));

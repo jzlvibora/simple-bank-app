@@ -33,6 +33,13 @@ public class Savings extends Account{
         super.showInfo();
         System.out.println("ACCOUNT: SAVINGS \n " + "SafetyBox: " + safetyDepositBox + "\n SafetyCode: " + safetyCode );
         System.out.println("*****************************************************************************");
+
+    }
+
+    @Override
+    protected void setRate() {
+        rate = getBaseRate() - .25;
+
     }
 
     private void setSafetyBox(){

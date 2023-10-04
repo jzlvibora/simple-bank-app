@@ -17,6 +17,9 @@ public abstract class Account implements InterestBaseRate {
         index++;
         this.accountNumber = setAccountNumber();
         System.out.println("Account: " + name + " AccountNum: " + this.accountNumber);
+//        System.out.println(getBaseRate());
+        setRate();
+        System.out.println("RATE: " + rate);
     }
 
     abstract double deposit();
@@ -37,4 +40,7 @@ public abstract class Account implements InterestBaseRate {
         String accountNumGen = last2ofSSN + "" + unique5 + "" + rand3;
         return accountNumGen;
     }
+
+    protected abstract void setRate();
+
 }
